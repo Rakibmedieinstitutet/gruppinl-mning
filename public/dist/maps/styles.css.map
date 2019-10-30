@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.css","reset.css"],"names":[],"mappings":"AAAA,OACI,WAAA,KACA,QAAA,YAAA,QAAA,KCFJ,EACI,OAAA,EACA,QAAA,EACA,WAAA","file":"../styles.css","sourcesContent":["header{\r\n    background: #000055;\r\n    display: flex;\r\n}","*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}"]}
