@@ -61,6 +61,7 @@ gulp.task("default", async function () {
 
 gulp.task("watch", async function () {
 
+   //
     gulp.watch(JS_PATH, gulp.series("scripts"))
     gulp.watch(CSS_PATH, gulp.series("styles"))
 })

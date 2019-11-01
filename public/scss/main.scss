@@ -2,3 +2,18 @@
 @import "reset.scss";
 @import "header.scss";
 
+.warning {
+    border:2px solid black;
+    height: 20rem;
+    width: 30rem;
+}
+
+
+.warning-success{
+@extend .warning;
+background: green;
+}
+.warning-failure{
+ @extend .warning;
+background: red;
+}
