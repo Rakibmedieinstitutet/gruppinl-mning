@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 /* const btn = document.querySelector("button")
 function add(){
    
@@ -106,7 +108,7 @@ kalle(5, 8); */
 //programmerings block
 
 //lägga till childElement 
-const div= document.createElement("div")
+/* const div= document.createElement("div")
 div.textContent="Det här är från JS"
 console.log(div);
 
@@ -116,3 +118,22 @@ const li = document.querySelector("li");
 
 //Remove en element 
 ul.removeChild(li) ;
+ */
+
+function List(e){
+    e.preventDefault();
+    const text= document.querySelector("#text").value;
+    const tel = document.querySelector("#tel").value;
+    const epost = document.querySelector("#email").value;
+    
+   const div= document.createElement("div");
+    const body = document.querySelector("body");
+    div.innerHTML="<li>" + text + "</li>"+ "<li>"+tel +"</li>" +
+    "<li>" +epost +"</li>"
+    body.appendChild(div);
+    console.log(text + " " + tel + " " + epost);
+
+
+}
+const addBtn = document.querySelector(".addBtn")
+addBtn.addEventListener("click", List );
