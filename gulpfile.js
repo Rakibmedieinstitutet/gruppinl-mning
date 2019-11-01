@@ -12,7 +12,7 @@ sass.compiler = require('node-sass');
 
 var JS_PATH = "public/**/*.js";
 
-const CSS_PATH = "public/css/**/*.css";
+const CSS_PATH = "public/scss/main.scss";
 //styles
 
 
@@ -23,13 +23,13 @@ gulp.task("styles", async function () {
         .pipe(plumber(function (err) {
             console.log("Styles error", err);
         }))
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(autoprefix())
         //  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        //  .pipe(sass().on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(concat("styles.css"))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(sourcemaps.write("./maps"))
+        //  .pipe(sourcemaps.write("./maps"))
         .pipe(gulp.dest("public/dist"))
 
 })
@@ -64,3 +64,5 @@ gulp.task("watch", async function () {
     gulp.watch(JS_PATH, gulp.series("scripts"))
     gulp.watch(CSS_PATH, gulp.series("styles"))
 })
+
+    //don't repeat yourself DRY
