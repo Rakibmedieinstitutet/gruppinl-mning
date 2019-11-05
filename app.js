@@ -1,4 +1,4 @@
-import { link } from "fs";
+
 
 /* const btn = document.querySelector("button")
 function add(){
@@ -120,20 +120,64 @@ const li = document.querySelector("li");
 ul.removeChild(li) ;
  */
 
-function List(e){
-    e.preventDefault();
-    const text= document.querySelector("#text").value;
-    const tel = document.querySelector("#tel").value;
-    const epost = document.querySelector("#email").value;
-    
-   const div= document.createElement("div");
-    const body = document.querySelector("body");
-    div.innerHTML="<li>" + text + "</li>"+ "<li>"+tel +"</li>" +
-    "<li>" +epost +"</li>"
-    body.appendChild(div);
-    console.log(text + " " + tel + " " + epost);
 
+
+
+
+
+
+
+/*  function List(e){
+    e.preventDefault();
+   
+    console.log(e);
+    const pris = document.querySelector("#produkt").value;
+    const moms = document.querySelector("#moms").value;
+   
+    const div= document.createElement("div");
+    const body = document.querySelector("body");
+    div.innerHTML="<li>" + pris + "</li>"+ "<li>"+moms+"</li>" +
+    "<li>" +pris +"</li>"
+    body.appendChild(div);
+    
+    console.log(div);
+
+
+const span= document.querySelector("span");
+
+console.log(Number(span.textContent));
 
 }
-const addBtn = document.querySelector(".addBtn")
-addBtn.addEventListener("click", List );
+const addBtn = document.querySelector(".rakna")
+addBtn.addEventListener("click", List ); */
+
+
+ 
+
+
+//import axios from "axios";
+// https://api.unsplash.com/ är location till resurs root.
+// serach/photo är resurs endpoint/data . det brukar vara JSON data
+// 
+/* window.navigator.geolocation.getCurrentPosition(
+    (position) =>{console.log(position.coords.latitude);
+    
+    console.log(position.coords.longitude);
+    },
+    (err)=>{console.log(err)}
+)
+
+function showData(){
+    window.location.href="faktura.html";
+    const pris = document.querySelector("#produkt").value;
+    const moms = document.querySelector("#moms").value;
+   
+    const div= document.createElement("div");
+    const body = document.querySelector("body");
+    div.innerHTML="<li>" + pris + "</li>"+ "<li>"+moms+"</li>" +
+    "<li>" +pris +"</li>"
+    body.appendChild(div);
+    
+    console.log(div);
+
+} */
